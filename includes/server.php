@@ -176,8 +176,7 @@ if(isset($_POST['admin_login'])){
         $fetch_pass = $fetch['password'];
         if($password==$fetch_pass){
             $_SESSION['email'] = $email;
-            
-              header('location: ../index2.php');
+              header('location: ../admin/mainpage.php');
         }else{
             $errors['email'] = "Incorrect email or password!";
         }
@@ -185,3 +184,4 @@ if(isset($_POST['admin_login'])){
         $errors['email'] = "Incorrect email or password!";
     }
 }
+?>

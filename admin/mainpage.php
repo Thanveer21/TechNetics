@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -97,45 +98,9 @@
   </div>
 </div>
 </div>
-    </section> <footer class="footer">
-      <div class="footer_info">
-        <div class="footer_width about">
-          <h2>TechNetics</h2>
-          <p>
-            TechNetics is an official student developers club of VIT University,
-            Vellore, we deal with various domains under information technology.
-            A technical club by the students and for the students of VIT
-            University, Vellore.
-          </p>
-        </div>
-        <div class="footer_width link">
-          <h2>Quick Link</h2>
-          <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Team</a></li>
-            <li><a href="#">Sponsors</a></li>
-          </ul>
-        </div>
-        <div class="footer_width Contact">
-          <h2>Contact</h2>
-          <ul>
-            <li>
-              <p>VIT University, Vellore</p>
-            </li>
-            <li>
-              <a href="#">technetics@gmail.com</a>
-            </li>
-            <li>
-              <a href="#">+91 9512307480</a>
-            </li>
-          </ul>
-        </div>
-        <div class="footer_width"></div>
-      </div>
-      <div class="copy-right">
-        &copy;Copyright 2020 || All rights reserverd
-      </div>
-    </footer>
+    </section> 
+    <?php
+include('../includes/footer.php');
+?>
     </body>
 </html>
