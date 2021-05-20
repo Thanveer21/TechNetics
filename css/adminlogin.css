@@ -34,6 +34,9 @@ img{
   margin-right: auto;
   width:110%;
 }
+.alert{
+  color:red;
+}
 .signup__overlay {
   position: absolute;
   top: 0;
