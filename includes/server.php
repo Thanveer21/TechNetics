@@ -61,7 +61,7 @@ if(isset($_POST['check'])){
       if($update_res){
           $_SESSION['regno'] = $regno;
           $_SESSION['email'] = $email;
-          header('location: index2.php');
+          header('location: login.php');
           exit();
       }else{
           $errors['otp-error'] = "Failed while updating code!";
@@ -169,6 +169,7 @@ if(isset($_POST['change_password'])){
 if(isset($_POST['admin_login'])){
     $email = mysqli_real_escape_string($con, $_POST['email']);
     $password = mysqli_real_escape_string($con, $_POST['password']);
+    $regno= mysqli_real_escape_string($con, $_POST['regno']);
     $check_aemail = "SELECT * FROM admin_table WHERE email = '$email'";
     $res = mysqli_query($con, $check_aemail);
     if(mysqli_num_rows($res) > 0){
@@ -176,6 +177,7 @@ if(isset($_POST['admin_login'])){
         $fetch_pass = $fetch['password'];
         if($password==$fetch_pass){
             $_SESSION['email'] = $email;
+            $_SESSION['adminlogin']=true;
               header('location: ../admin/mainpage.php');
         }else{
             $errors['email'] = "Incorrect email or password!";

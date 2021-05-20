@@ -22,11 +22,11 @@
                 <ul>
                     <?php
                     if (!empty($_SESSION['logged_in'])) { ?>
-                        <a href="../Technetics/index2.php">
+                        <a href="../Technetics-full/index2.php">
                             <li>Home</li>
                         </a>
                     <?php } else { ?>
-                        <a href="../Technetics/index.php">
+                        <a href="../Technetics-full/index.php">
                             <li>Home</li>
                         </a>
                     <?php }
@@ -45,13 +45,20 @@
                     </a>
                     <?php
                     if (!empty($_SESSION['logged_in'])) { ?>
+                        <a href="../Technetics-full/launchquiz.php">
+                        <li>Quiz</li>
+                        </a>
                         <a href="includes/logout.php" onclick="return confirm('Are you sure you want to logout')">
                             <li>Logout</li>
                         </a>
+
                     <?php } else { ?>
                         <a href="login.php">
                             <li>Login</li>
                         </a>
+                        <a href="../Technetics-full/admin/adminlogin.php">
+                        <li>Admin Login</li>
+                    </a>
                     <?php }
                     ?>
                 </ul>
