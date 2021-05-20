@@ -40,10 +40,10 @@ if (isset($_POST['login'])) {
       <table cellspacing="30px;" class="ttable">
         <tr>
           <td>
-            <img src="images/picture1.jpg" alt="" width="200" height="200" />
+            <img src="images/p.jpg" alt="" width="200" height="200" />
           </td>
           <td>
-            <h2>Chairperson - Bill Gates</h2>
+            <h2>Co-President (Design & Technical) - Naseer Thanveer</h2>
             <p>
               He stands with zeal to achieve his vision of making TechNetics a
               memorable chapter. His unique way of mentoring brings the entire
@@ -58,15 +58,16 @@ if (isset($_POST['login'])) {
         </tr>
         <tr>
           <td>
-            <img src="images/picture2.jpg" width="200" height="200" />
+            <img src="images/vp.jpg" width="200" height="200" />
           </td>
           <td>
-            <h2>Vice Chairperson(Management) - Elon Musk</h2>
+            <h2>Co-President (Management) - Snegha Ashok</h2>
             <p>
-              Mechanical guy turned developer turned Vice Chair of a technical
-              chapter, with his thirst for knowledge and perfection,who might
-              one day change the dating scene in the campus with his app;
-              brings more to the table with his skills than one can fathom.
+              Sweet, kind, fun loving, easy to like and very knowledgeable are some of the few 
+              words that can be used to describe our co-president.When you work with her you can never 
+              feel like you cant go to her for anything.Her confidence and her knowledge
+              is what keeps the club running the way it is. Her management skills are
+              strict but at the same time she always listens to what everyone says.
             </p>
           </td>
         </tr>
@@ -77,16 +78,17 @@ if (isset($_POST['login'])) {
         </tr>
         <tr>
           <td>
-            <img src="images/picture3.jpg" width="200" height="200" />
+            <img src="images/vp.jpg" width="200" height="200" />
           </td>
           <td>
-            <h2>Technical Head - Sundar Pichaai</h2>
+            <h2>Co-President (Technical)- Kavya A Rao</h2>
             <p>
-              An epitome of all round technical and management skills, he is
-              known for the websites he builds, projects he undertakes and
-              hacks he triumphs. He is outgoing and addresses any technical
-              concerns and queries one can possibly have. Proudly presenting
-              our Technical Head.
+              An epitome of all round technical skills, she is
+              known for the websites she builds, projects she undertakes and
+              hacks she triumphs. She addresses any technical
+              concerns and queries one can possibly have. and she is always determined to
+              finish whatever started and wont quit until it is done.
+
             </p>
           </td>
         </tr>
@@ -224,7 +226,7 @@ if (isset($_POST['login'])) {
             <p>
               A fantastic designer, and a better CS-GO player, the creator of
               some of our most celebrated designs and event posters, the
-              campus ambassador of 'free hackathons'; he has proven his mettle
+              campus ambassador of 'free hackathons'; she has proven his mettle
               in every task that has been thrown his way. Meet our Design and
               Media head Isha
             </p>

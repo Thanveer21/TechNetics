@@ -90,7 +90,7 @@ if($email == false){
                     }
                     ?>
                     <div class="form-group">
-                        <input class="form-control" type="number" name="otp" placeholder="Enter your otp" required>
+                        <input class="form-control" type="number" name="otp" placeholder="Enter your otp" maxlength=6 required>
                     </div>
                     <div class="form-group">
                         <input class="form-control" type="password" name="password" placeholder="Create new password" required>

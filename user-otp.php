@@ -91,7 +91,7 @@ if($email == false){
                     }
                     ?>
                     <div class="form-group">
-                        <input class="form-control" type="number" name="otp" placeholder="Enter verification code" required>
+                        <input class="form-control" type="number" name="otp" placeholder="Enter verification code" maxlength=6 required>
                     </div>
                     <div class="form-group">
                         <input class="btn btn--form" type="submit" name="check" value="Submit">

@@ -1,5 +1,6 @@
 <?php
 include('includes/server.php');
+include ('includes/config.php');
 ?>
 <?php
 $email = $_SESSION['email'];
@@ -33,11 +34,11 @@ if (!empty($email) && !empty($regno)) {
                 <ul>
                     <?php
                     if (!empty($_SESSION['logged_in'])) { ?>
-                        <a href="../Technetics/index2.php">
+                        <a href="../Technetics-full/index2.php">
                             <li>Home</li>
                         </a>
                     <?php } else { ?>
-                        <a href="../Technetics/index.php">
+                        <a href="../Technetics-full/index.php">
                             <li>Home</li>
                         </a>
                     <?php }
@@ -56,6 +57,9 @@ if (!empty($email) && !empty($regno)) {
                     </a>
                     <?php
                     if (!empty($_SESSION['logged_in'])) { ?>
+                        <a href="../Technetics-full/launchquiz.php">
+                        <li>Quiz</li>
+                        </a>
                         <a href="includes/logout.php" onclick="return confirm('Are you sure you want to logout')">
                             <li>Logout</li>
                         </a>
@@ -170,6 +174,47 @@ if (!empty($email) && !empty($regno)) {
                         <div id="day"></div>
                         <div id="hr"></div>
                     </div>
+                    <?php
+                    $_SESSION['eventname']="TechNocs";
+                    ?>
+                    <?php
+                    if(isset($_GET['regevent']))
+                    {
+                    if($_GET['regevent']==true)
+                    {
+                      $reg=$_SESSION['regno'];
+                      $email=$_SESSION['email'];
+                      $en=$_SESSION['eventname'];
+                      $check_exits="SELECT name FROM event WHERE RegNo='$reg'";
+                      $result=mysqli_query($con,$check_exits);
+                      if(mysqli_num_rows($result)>0)
+                      {
+                        echo "<script>alert('You are already registered for the event ! more details will be intimated to you very soon please wait!')</script>";
+                      }
+                      else
+                      {
+                                          $check_presence= "SELECT name FROM users WHERE register_no = '$reg'";
+                      $res = mysqli_query($con, $check_presence);
+                      $p=0;
+                      if(mysqli_num_rows($res) > 0){
+                      while ($row = mysqli_fetch_array($res)) {
+                            $name= $row['name'];
+                      }
+                      $insert = "INSERT INTO event(RegNo,Name,Email,EventName) values(?,?,?,?)";
+                          $stmt = mysqli_prepare($con, $insert);
+                        mysqli_stmt_bind_param($stmt,"ssss",$reg,$name,$email,$en);
+                          if(mysqli_stmt_execute($stmt)){
+                              echo "<script>alert('You have been successfully registered for the event!!. Further information will be intimated to you!')</script>";
+                          }else{
+                              echo "<script>alert('Sorry there has been an issue!')</script>";
+                          }
+                      }  
+    
+                        }
+                     }
+                     } 
+                     ?>
+                <center><button type="button" class="btn" name="regevent" style="width: 170px;height: 50px; margin-top: 3rem;color: black;"><a href="index2.php?regevent=true" style="color: black;">Register Now</a></button></center>
                 </div>
             </div>
         </div>
